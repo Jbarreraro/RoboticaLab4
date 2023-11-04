@@ -59,9 +59,9 @@ if __name__ == '__main__':
         print("Las siguientes posiciones estan en grados, seleccione 1")
         print("Posicion 1: [0 180 270 180 150]")
         print("Posicion 2: [25 205 295 160 150 ]")
-        print("Posicion 1: 325 215 300 210 150]")
-        print("Posicion 1: [ 85 160 300 175 150]")
-        print("Posicion 1: [80 145 300 135 150]")
+        print("Posicion 3: [325 215 300 210 150]")
+        print("Posicion 4: [ 85 160 300 175 150]")
+        print("Posicion 5: [80 145 300 135 150]")
         ListaPos=[Pos1,Pos2,Pos3,Pos4,Pos5]
         #joint_command('',1,'Torque_Limit',100,0)
         #joint_command('',1,'Goal_Position',63,0.5)
@@ -72,10 +72,10 @@ if __name__ == '__main__':
         while True:
             print(" ")
             numPosicion= int(input("Elija posicion: "))
-            PosElegia=ListaPos[numPosicion-1]
+            PosElegida=ListaPos[numPosicion-1]
             for i in range(5):
                 #joint_command('',i+1,'Torque_Limit',70,0)
-                joint_command('',i+1,'Goal_Position',PosElegia[i],2)
+                joint_command('',i+1,'Goal_Position',PosElegida[i],2)
             print('')
             for i in range(5):
                 #print("Posicion de la articulacion" + int(i) + ":")
